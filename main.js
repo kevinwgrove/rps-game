@@ -19,7 +19,7 @@ function userSelection(evt) {
     evt.stopPropagation()
 
     if (randomNum === 1) {
-        compImg.src = "/images/rock.png"
+        compImg.src = "images/rock.png"
         if (randomNum === 1 && nodeId == 'paper') {
             userScore +=1
             if (userScore < 10) {
@@ -35,8 +35,9 @@ function userSelection(evt) {
                 document.getElementById('computerScore').innerHTML = computerScore
             }
         } 
+
     } else if (randomNum === 2) {
-        compImg.src = "/images/paper.png"
+        compImg.src = "images/paper.png"
         if (randomNum === 2 && nodeId == 'scissors') {
             userScore +=1
             if (userScore < 10) {
@@ -52,8 +53,9 @@ function userSelection(evt) {
                 document.getElementById('computerScore').innerHTML = computerScore
             }
         } 
+
     } else {
-        compImg.src = "/images/scissors.png"
+        compImg.src = "images/scissors.png"
         if (randomNum === 3 && nodeId == 'rock') {
             userScore +=1
             if (userScore < 10) {
@@ -81,7 +83,7 @@ resetButton.addEventListener('click', function () {
     
     document.getElementById('userScore').innerHTML = '00'
     document.getElementById('computerScore').innerHTML = '00'
-    compImg.src = "/images/computer.png"
+    compImg.src = "images/computer.png"
     
 })
 
