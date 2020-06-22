@@ -1,0 +1,131 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} */
+font-family: 'Dosis', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oxanium', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Rationale', sans-serif;
+font-family: 'Unica One', cursive;
+font-family: 'VT323', monospace;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+
+body {
+    /* margin: 20px; */
+    background-color: rgb(227, 227, 227);
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    border: solid black;
+    border-radius: 15px;
+    height: 120px;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.header-score {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 1em;
+    border: solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 140, 0);
+    text-align: center;
+}
+
+#rps-container {
+    margin: 20px;
+}
+
+header, #rps-container {
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-evenly; */
+}
+
+.header-node, .header-text, .header-score, .rps {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    font-size: 30px;
+}
+
+.header-text{
+    /* text-decoration: underline; */
+    font-family: 'Permanent Marker', cursive;
+}
+
+.rps:first-child, .rps:last-child, .header-node:first-child, .header-node:last-child {
+    flex-basis: 40%;
+    align-self: center;
+    flex-grow: 2;
+}
+
+#reset-button {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    background-color: gainsboro;
+    border: solid;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    align-content: center;
+}
+
+#reset-button:hover {
+    box-shadow: 2px 2px 5px;
+    cursor: default;
+}
+
+#reset-button:active {
+    box-shadow: 0 0 0;
+}
+
+#vs {
+   text-align: center; 
+   font-family: 'Permanent Marker', cursive;
+}
+
+#user-selection img {
+    margin: 10px 0;
+    padding: 40px;
+    border: solid black;
+    border-radius: 28%;
+}
+
+img {
+    align-self: center;
+}
+
+#rock, #scissors {
+    height: 100px;
+}
+
+#paper {
+    height: 150px;
+}
+
+#rock, #scissors, #paper {
+    box-shadow: 10px 10px;
+}
+
+#user-selection img:hover, #reset-button:hover {
+    background-color: rgb(255, 201, 134);
+}
+
+#user-selection img:active {
+    box-shadow: 5px 2px;
+}

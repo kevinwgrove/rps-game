@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Orbitron:wght@500&family=Oxanium&family=Permanent+Marker&family=Press+Start+2P&family=Rajdhani&family=Rationale&family=Unica+One&family=VT323&family=ZCOOL+QingKe+HuangYou&display=swap');
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="header-node">
+                <span class="header-text">
+                    User
+                </span>
+                <div class="header-score" id="userScore">00
+                </div>
+            </div>
+
+            <div class="header-node" id="reset-button">RESET
+            </div>
+
+            <div class="header-node">
+                <span class="header-text">
+                    Computer
+                </span>
+                <div class="header-score" id="computerScore">00
+                </div>
+            </div>
+        </header>
+
+        <div id="rps-container">
+            <div class="rps" id="user-selection">
+                <img src="/images/rock.png" alt="Rock" id="rock">
+                <img src="/images/paper.png" alt="Paper" id="paper">
+                <img src="/images/scissors.png" alt="Scissors" id="scissors">
+            </div>
+
+            <div class="rps" id="vs">
+                VS.
+            </div>
+
+            <div class="rps" id="computer-div">
+                <img id="computer" src="/images/computer.png" alt="Computer">
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
