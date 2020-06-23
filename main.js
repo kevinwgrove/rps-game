@@ -18,64 +18,33 @@ function userSelection(evt) {
     let computerScore = parseInt(document.getElementById('computerScore').innerHTML)
     evt.stopPropagation()
 
+    if ((randomNum === 1 && nodeId == 'paper') || (randomNum === 2 && nodeId == 'scissors') || (randomNum === 3 && nodeId == 'rock')) {
+        userScore += 1
+    } else if ((randomNum === 1 && nodeId == 'scissors') || (randomNum === 2 && nodeId == 'rock') || (randomNum === 3 && nodeId == 'paper')) {
+        computerScore += 1
+    } else {
+
+    }
+
     if (randomNum === 1) {
         compImg.src = "images/rock.png"
-        if (randomNum === 1 && nodeId == 'paper') {
-            userScore +=1
-            if (userScore < 10) {
-                document.getElementById('userScore').innerHTML = '0' + userScore
-            } else {
-                document.getElementById('userScore').innerHTML = userScore
-            }
-        } else if (randomNum === 1 && nodeId == 'scissors') {
-            computerScore +=1
-            if (computerScore < 10) {
-                document.getElementById('computerScore').innerHTML = '0' + computerScore
-            } else {
-                document.getElementById('computerScore').innerHTML = computerScore
-            }
-        } 
-
     } else if (randomNum === 2) {
         compImg.src = "images/paper.png"
-        if (randomNum === 2 && nodeId == 'scissors') {
-            userScore +=1
-            if (userScore < 10) {
-                document.getElementById('userScore').innerHTML = '0' + userScore
-            } else {
-                document.getElementById('userScore').innerHTML = userScore
-            }
-        } else if (randomNum === 2 && nodeId == 'rock') {
-            computerScore +=1
-            if (computerScore < 10) {
-                document.getElementById('computerScore').innerHTML = '0' + computerScore
-            } else {
-                document.getElementById('computerScore').innerHTML = computerScore
-            }
-        } 
-
     } else {
         compImg.src = "images/scissors.png"
-        if (randomNum === 3 && nodeId == 'rock') {
-            userScore +=1
-            if (userScore < 10) {
-                document.getElementById('userScore').innerHTML = '0' + userScore
-            } else {
-                document.getElementById('userScore').innerHTML = userScore
-            }
-        } else if (randomNum === 3 && nodeId == 'paper') {
-            computerScore +=1
-            if (computerScore < 10) {
-                document.getElementById('computerScore').innerHTML = '0' + computerScore
-            } else {
-                document.getElementById('computerScore').innerHTML = computerScore
-            }
-        } 
     }
-    console.log(nodeId)
-    console.log(randomNum)
-    console.log(userScore)
-    console.log(computerScore)
+
+    if (userScore < 10) {
+        document.getElementById('userScore').innerHTML = '0' + userScore
+    } else {
+        document.getElementById('userScore').innerHTML = userScore
+    }
+
+    if (computerScore < 10) {
+        document.getElementById('computerScore').innerHTML = '0' + computerScore
+    } else {
+        document.getElementById('computerScore').innerHTML = computerScore
+    }
 }
 
 resetButton.addEventListener('click', function () {
@@ -86,6 +55,3 @@ resetButton.addEventListener('click', function () {
     compImg.src = "images/computer.png"
     
 })
-
-
-    
