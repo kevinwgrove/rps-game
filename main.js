@@ -34,15 +34,11 @@ function userSelection(evt) {
         compImg.src = "images/scissors.png"
     }
 
-    if (userScore < 10) {
+    if (userScore < 10 && computerScore < 10) {
         document.getElementById('userScore').innerHTML = '0' + userScore
-    } else {
-        document.getElementById('userScore').innerHTML = userScore
-    }
-
-    if (computerScore < 10) {
         document.getElementById('computerScore').innerHTML = '0' + computerScore
     } else {
+        document.getElementById('userScore').innerHTML = userScore
         document.getElementById('computerScore').innerHTML = computerScore
     }
 }
