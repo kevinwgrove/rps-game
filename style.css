@@ -27,33 +27,33 @@ body {
     width: 100%;
 }
 
-header {
-    border: solid black;
-    border-radius: 15px;
-    height: 120px;
-    margin: 20px;
-    margin-bottom: 50px;
-}
-
-.header-score {
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    width: 1em;
-    border: solid black;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 140, 0);
+#rps {
+    font-family: 'Permanent Marker', cursive;
+    width: 100%;
     text-align: center;
+    font-size: 35px;
 }
 
-#rps-container {
-    margin: 20px;
-}
-
-header, #rps-container {
+header div, #rps-container {
     display: flex;
     flex-flow: row nowrap;
-    /* justify-content: space-evenly; */
+}
+
+header span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+}
+
+header {
+    font-family: 'Permanent Marker', cursive;
+    border: solid black;
+    border-radius: 15px;
+    height: 150px;
+    margin: 10px;
+    margin-bottom: 20px;
+
 }
 
 .header-node, .header-text, .header-score, .rps {
@@ -62,10 +62,15 @@ header, #rps-container {
     align-self: center;
     font-size: 30px;
 }
+/* .header-text:first-child, .header-text:last-child, .header-node:first-child, .header-node:last-child {
+    text-align: center;
+    flex-basis: 40%;
+    align-self: center;
+    align-items: center;
+} */
 
-.header-text{
-    /* text-decoration: underline; */
-    font-family: 'Permanent Marker', cursive;
+.header-text {
+    font-size: 25px;
 }
 
 .rps:first-child, .rps:last-child, .header-node:first-child, .header-node:last-child {
@@ -73,6 +78,25 @@ header, #rps-container {
     align-self: center;
     flex-grow: 2;
 }
+
+
+#score-board {
+    text-align: center;
+    font-size: 30px;
+}
+
+.header-score {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    width: 1em;
+    margin: 0;
+    border: solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 140, 0);
+    text-align: center;
+}
+
 
 #reset-button {
     font-family: 'Permanent Marker', cursive;
@@ -94,9 +118,17 @@ header, #rps-container {
     box-shadow: 0 0 0;
 }
 
+#rps-container {
+    margin: 20px;
+}
+
+
+
+
+
 #vs {
-   text-align: center; 
-   font-family: 'Permanent Marker', cursive;
+    text-align: center; 
+    font-family: 'Permanent Marker', cursive;
 }
 
 #user-selection img {
