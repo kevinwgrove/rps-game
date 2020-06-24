@@ -53,7 +53,33 @@ header {
     height: 150px;
     margin: 10px;
     margin-bottom: 20px;
+}
 
+#point-calculator {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+    height: 32px;
+}
+
+#point-user, #point-computer, #tie {
+    color: red;    
+}
+
+.point-text {
+    align-self: center;
+    text-align: center;
+}
+
+.point-text:first-child, .point-text:last-child {
+    flex-basis: 47%;
+    align-self: center;
+}
+
+.point-text:nth-child(2) {
+    flex-basis: 6%;
 }
 
 .header-node, .header-text, .header-score, .rps {

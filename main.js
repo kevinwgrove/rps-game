@@ -2,6 +2,9 @@ const rock = document.querySelector('#rock')
 const paper = document.querySelector('#paper')
 const scissors = document.querySelector('#scissors')
 const resetButton = document.querySelector('#reset-button')
+const userPoint = document.querySelector('#point-user')
+const tie = document.querySelector('#tie')
+const computerPoint = document.querySelector('#point-computer')
 
 rock.addEventListener('click', userSelection)
 paper.addEventListener('click', userSelection)
@@ -16,14 +19,36 @@ function userSelection(evt) {
     let compImg = document.querySelector('#computer')
     let userScore = parseInt(document.getElementById('userScore').innerHTML)
     let computerScore = parseInt(document.getElementById('computerScore').innerHTML)
+    let createElement = document.createElement('div')
     evt.stopPropagation()
+
+    computerPoint.innerHTML = ''
+    userPoint.innerHTML = ''
+    tie.innerHTML = ''
+
+    userPoint.style.transition = ''
+    computerPoint.style.transition = ''
+    tie.style.transition = ''
+
+    userPoint.style.color = 'red'
+    computerPoint.style.color = 'red'
+    tie.style.color = 'red'
+
 
     if ((randomNum === 1 && nodeId == 'paper') || (randomNum === 2 && nodeId == 'scissors') || (randomNum === 3 && nodeId == 'rock')) {
         userScore += 1
+        userPoint.innerHTML = '+1'
+        userPoint.style.transition = 'color 2.5s ease'
+        userPoint.style.color = 'black'
     } else if ((randomNum === 1 && nodeId == 'scissors') || (randomNum === 2 && nodeId == 'rock') || (randomNum === 3 && nodeId == 'paper')) {
         computerScore += 1
+        computerPoint.innerHTML = '+1'
+        computerPoint.style.transition = 'color 2.5s ease'
+        computerPoint.style.color = 'black'
     } else {
-
+        tie.innerHTML = 'Tie'
+        tie.style.transition = 'color 2.5s ease'
+        tie.style.color = 'black'  
     }
 
     if (randomNum === 1) {
@@ -49,5 +74,7 @@ resetButton.addEventListener('click', function () {
     document.getElementById('userScore').innerHTML = '00'
     document.getElementById('computerScore').innerHTML = '00'
     compImg.src = "images/computer.png"
-    
+    userPoint.innerHTML = ''
+    computerPoint.innerHTML = ''
+    tie.innerHTML = ''
 })
